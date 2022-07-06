@@ -1,6 +1,10 @@
 import logo from './satchmologo.jpg';
 import './App.css';
 import NavBar from './components/NavBar.js';
+import ItemListContainer from './components/ItemListContainer';
+import CartWidget from './components/CartWidget';
+
+
 
 function App() {
   return (
@@ -9,8 +13,17 @@ function App() {
       <header className="App-header">
         <div><img src={logo} alt="logo"/>
         <NavBar/>
+        <CartWidget />
         </div>
+       <div>
+       
+
+       </div>
       </header>
+      <body>
+     
+        <ItemListContainer />
+      </body>
     </div>
 
 
