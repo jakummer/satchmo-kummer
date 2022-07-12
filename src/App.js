@@ -13,7 +13,6 @@ function App() {
       <header className="App-header">
         <div><img src={logo} alt="logo"/>
         <NavBar/>
-        <CartWidget />
         </div>
        <div>
        

@@ -88,3 +88,14 @@ nav ul li:hover {
   color: white;
   */
 }
+
+.contenedor{
+  display: flex;
+  flex-direction: row;
+  justify-content:left;
+}
+
+button{
+  height: 20px;
+}
+
