@@ -1,40 +1,35 @@
 import React from 'react';
-import ItemCount from './ItemCount';
+import { useState, useEffect } from "react";
+import ItemList from "./ItemList";
+import products from "../mock/productsmock";
+import { useParams } from 'react-router-dom';
+ 
 
+const ItemListContainer = () =>{
+    const [items, setItems] = useState([])
+    const { categoria } = useParams()
 
-function ItemListContainer(){
-return(
-       
-        <div>
-         
-            Nuestros productos: 
-            <ul>
-                <li>Trompetas</li>
-                <ItemCount />
-                <p></p>
-                <li>Saxos</li>
-                <ItemCount />
-                <p></p>
-                <li>Clarinetes</li>
-                <ItemCount />
-                <p></p>
-                <li>Trombones</li>
-                <ItemCount />
-                <p></p>
-                <li>Guitarras</li>
-                <ItemCount />
-                <p></p>
-                <li>Pianos</li>
-                <ItemCount />
-                <p></p>
-                <li>Percusión</li>
-                <ItemCount />
-                <p></p>
-            </ul>
+    useEffect(()=> {
+      const traerProductos = new Promise((res,rej) =>{
+          setTimeout(()=> {
+              res(categoria ? products.filter(obj => obj.category === categoria) : products)
+          },500);  
+    });
+    traerProductos
+    .then((data)=>{
+      setItems(data);
+ 
+    })
+    .catch((error)=> {
+      console.log(error);
+    });
 
-        </div>
+  },[categoria]);
+    
 
-        );
-};
+   return (
+         <ItemList products = {products} />
+    );
+}
 
-export default ItemListContainer;
+export default ItemListContainer

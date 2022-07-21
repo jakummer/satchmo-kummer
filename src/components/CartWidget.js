@@ -1,23 +1,15 @@
-import React, { useState } from 'react';
-
+import logo_chart from '../assets/images/chart_icon_6.jpg';
 
 function CartWidget() {
-  const [contador, setContador] = useState(0);
-       
-  const click = () => {
-    setContador(contador + 1);
-    };
-
-
+  
   return (
-    <div  onClick={click}>
-        <h5>
-            Carrito: {contador} {contador === 1 ? 'productos' : 'productos'}
-        </h5>
-    
+    <div class="divChart">
+        <img class="chart_image" src={logo_chart} alt="logo"/>
+        <div class="textChart">productos</div>
+           
     </div>
 )};
-
+ 
 
 export default CartWidget;
   

@@ -1,20 +1,23 @@
-import React from 'react';
+import React from 'react'
+import CartWidget from './CartWidget'
+import {Link, NavLink} from "react-router-dom"
+
  
 
 function NavBar(){
 return(
-       
-        <nav>
-                
-                <ul>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Quienes somos</a></li>
-                        <li><a href="#">Tienda</a></li>
-                        <li><a href="#">Recursos</a></li>
-                        <li><a href="#">Contacto</a></li>
-                </ul>
+      <nav> 
+        <div>
+        <ul>
+                <li><NavLink to = "/">Inicio</NavLink></li>
+                <li><a href="#">Quienes somos</a></li>
+                <li><NavLink to = "/categorias/instrumentos">Instrumentos Musicales</NavLink></li>
+                <li><NavLink to = "/categorias/sonido">Sonido</NavLink></li>
+                <li><a href="#">Contacto</a></li>
+        </ul>
+        </div>
         </nav>
-
+     
         );
 };
 

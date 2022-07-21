@@ -1,30 +1,22 @@
-import logo from './satchmologo.jpg';
 import './App.css';
-import NavBar from './components/NavBar.js';
 import ItemListContainer from './components/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer';
 import CartWidget from './components/CartWidget';
-
+import Header from './components/Header';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
 function App() {
   return (
    
-    <div className="App">
-      <header className="App-header">
-        <div><img src={logo} alt="logo"/>
-        <NavBar/>
-        </div>
-       <div>
-       
-
-       </div>
-      </header>
-      <body>
-     
-        <ItemListContainer />
-      </body>
-    </div>
-
+   <BrowserRouter>
+      <Header />
+      <Routes>
+          <Route path="/" element={<ItemListContainer/>}/>
+          <Route path="/categorias/:category" element={<ItemListContainer/>}/>
+          <Route path="/item/:id" element={<ItemDetailContainer/>}/>
+      </Routes>
+   </BrowserRouter> 
 
   );
 }
