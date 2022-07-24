@@ -24,6 +24,7 @@ return(
         <br></br>
         <div class="contenedor" ><button onClick={click_2} > - </button><button>{contador}</button><button onClick={click_1}> + </button></div>
         <button>Agregar al carrito</button> 
+        <br></br>
     
     </div>
     );

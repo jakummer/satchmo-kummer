@@ -1,35 +1,42 @@
 import React from 'react';
 import { useState, useEffect } from "react";
 import ItemList from "./ItemList";
-import products from "../mock/productsmock";
+import lista from "../mock/productsmock";
 import { useParams } from 'react-router-dom';
  
 
 const ItemListContainer = () =>{
-    const [items, setItems] = useState([])
-    const { categoria } = useParams()
-
-    useEffect(()=> {
-      const traerProductos = new Promise((res,rej) =>{
-          setTimeout(()=> {
-              res(categoria ? products.filter(obj => obj.category === categoria) : products)
-          },500);  
-    });
-    traerProductos
-    .then((data)=>{
-      setItems(data);
- 
-    })
-    .catch((error)=> {
-      console.log(error);
-    });
-
-  },[categoria]);
-    
-
-   return (
-         <ItemList products = {products} />
-    );
+  const [items, setItems] = useState([])
+  const { categoria } = useParams()
+  
+  const traerItems = () => {
+  return new Promise((resolve)=>{
+  
+  setTimeout(()=>{
+         resolve(categoria ? lista.filter(obj => obj.category === categoria): lista )
+    }, 500)
+  })
 }
-
-export default ItemListContainer
+  
+   
+  
+  useEffect(()=>{
+    traerItems().then(res => {
+    setItems(res)
+    })
+  },[categoria])
+  
+   
+  
+  return(
+    <ItemList items={items}/>
+    )
+  
+   
+  }
+  
+  export default ItemListContainer
+  
+   
+  
+   

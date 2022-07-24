@@ -23,7 +23,7 @@ import consolaDetail from '../assets/images/consola-digital-zoom-l-12-12-canales
 
 const products = [
     {
-        id: 1001,
+        id: '1001',
         title: 'GUITARRA CLASICA VALENCIA DE ESTUDIO TAMAÑO MINI (22) C102 COLOR NATURAL',
         detail: 'Origen China - Cuerdas 6 - Tipo Equalizador: No - Corte: No - Mano: Diestro - Accesorio Incluido: No',
         category: 'instrumentos',
@@ -36,7 +36,7 @@ const products = [
        
     
     {
-        id: 1002,
+        id: '1002',
         title: 'TROMPETA LINCOLN WINDS EN BB CON TERMINACIÓN EN LACA DORADA', 
         detail: 'Trompeta Lincoln Bb  en Dorado - Origen: China',
         category: 'instrumentos',
@@ -49,7 +49,7 @@ const products = [
     
     
     {
-        id: 1003,
+        id: '1003',
         title: 'SAXO ALTO STAGG LEVANTE EB CON ESTUCHE PARA ESTUDIO', 
         detail: 'Saxo Alto Stagg levante Eb con estuche para estudio - Origen: China',
         category: 'instrumentos',
@@ -61,7 +61,7 @@ const products = [
     },
     
     {
-        id: 1004,
+        id: '1004',
         title: 'CORNO JUPITER | BB | VALVULAS FOSFORADAS | ROSE BRASS LEADPIPE', 
         detail: 'Corno Jupiter Bb - Válvulas fosforadas - Reose brass leadpipe c/estuche - JHR-754L - Origen: China',
         category: 'instrumentos',
@@ -74,7 +74,7 @@ const products = [
     
      
     {
-        id: 1005,
+        id: '1005',
         title: 'CLARINETE LINCOLN WINDS JYCL1301 CON 17 LLAVES',
         detail: 'Clarinete Lincoln Winds JYCL1301 con 17 llaves - Origen: China',
         category: 'instrumentos',
@@ -87,7 +87,7 @@ const products = [
     
     
     {
-        id: 1006,
+        id: '1006',
         title: 'VIOLIN DE ESTUDIO PALATINO 4/4', 
         detail: 'Violín de estudio Palatino 4/4 - Rojo - Origen: China',
         category: 'instrumentos',
@@ -100,7 +100,7 @@ const products = [
     
     
     {
-        id: 1007,
+        id: '1007',
         title: 'AMPLIFICADOR DE AURICULARES ISK | 4 SALIDAS TRS | HA300', 
         detail: 'Amplificador de Auriculares ISK - 4 Salidas TRS - HA300 - Fuente de Alimentación - Origen: China',
         category: 'sonido',
@@ -113,7 +113,7 @@ const products = [
     
      
     {
-        id: 1008,
+        id: '1008',
         title: 'MIXER 5 CANALES MACKIE MIX5 C/PHANTOM', 
         detail: 'Mixer 5 canales Mackie Mix5 c/Phatom - Analógica - Fuente Externa -s/Efectos - Origen: China',
         category: 'sonido',
@@ -126,7 +126,7 @@ const products = [
     
     
     {
-        id: 1009,
+        id: '1009',
         title: 'CONSOLA DIGITAL ZOOM L-12 | 12 CANALES | MEZCLA VIVO', 
         detail: 'Consola Digital Zoom L-12 12 Canales distintos (8 mono y 2 estéreo) con conexión XLR ó de 1/4 de pulgada Entradas RCA y TS de línea',
         category: 'sonido',
