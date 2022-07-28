@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from "react-router-dom"
 import ItemCount from './ItemCount';
 
-const Item = ({items})=>{
+const Item = ({item})=>{
     <br></br>
     return(
 
@@ -10,22 +10,22 @@ const Item = ({items})=>{
                 <br></br>
                 <div class="card">
                     <br></br>
-                    <img src={items.imgItemURL} alt={items.title} />
+                    <img src={item.imgItemURL} alt={item.title} />
                     <br></br>
-                     {items.title}
+                     {item.title}
                      <br></br><br></br>
-                     {items.price}
+                     {item.price}
                      <br></br><br></br>
-                     <Link to ={`/item/${items.id}`}><button>Ver Detalle</button></Link>
+                     <Link to ={`/item/${item.id}`}><button>Ver Detalle</button></Link>
                      <br></br>  
                      
                      <br></br>
                      <br></br>
-                     Stock: {items.stock} unid.
+                     Stock: {item.stock} unid.
                 </div>
             </div>
        
-    ) 
+    )  
 }
 
 export default Item;
