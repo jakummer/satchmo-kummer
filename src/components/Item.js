@@ -14,8 +14,12 @@ const Item = ({items})=>{
                     <br></br>
                      {items.title}
                      <br></br><br></br>
+                     {items.price}
+                     <br></br><br></br>
                      <Link to ={`/item/${items.id}`}><button>Ver Detalle</button></Link>
                      <br></br>  
+                     
+                     <br></br>
                      <br></br>
                      Stock: {items.stock} unid.
                 </div>
