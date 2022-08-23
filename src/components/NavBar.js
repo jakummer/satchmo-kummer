@@ -6,17 +6,18 @@ import {Link, NavLink} from "react-router-dom"
 
 function NavBar(){
 return(
-      <nav> 
+   <nav> 
         <div>
-        <ul>
+           <ul>
                 <li><NavLink to = "/">Inicio</NavLink></li>
                 <li><a href="#">Quienes somos</a></li>
                 <li><NavLink to = "/categorias/instrumentos">Instrumentos Musicales</NavLink></li>
                 <li><NavLink to = "/categorias/sonido">Sonido</NavLink></li>
                 <li><a href="#">Contacto</a></li>
-        </ul>
+               
+           </ul>
         </div>
-        </nav>
+    </nav>
      
         );
 };

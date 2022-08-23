@@ -19,7 +19,7 @@ import violinDetail from '../assets/images/violin-de-estudio-palatino-44-color-r
 import amplificadorDetail from '../assets/images/amplificador-de-auriculares-isk-4-salidas-trs-ha300_detail.jpg';
 import mixerDetail from '../assets/images/mixer-5-canales-mackie-mix5-cphantom_detail.jpg';
 import consolaDetail from '../assets/images/consola-digital-zoom-l-12-12-canales-mezcla-vivo-monitores-grabacion_detail.jpg';
-
+                                          
 
 const products = [
     {

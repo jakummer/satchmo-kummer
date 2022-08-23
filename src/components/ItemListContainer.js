@@ -3,40 +3,53 @@ import { useState, useEffect } from "react";
 import ItemList from "./ItemList";
 import lista from "../mock/productsmock";
 import { useParams } from 'react-router-dom';
- 
+import { collection, getDoc, getDocs, getFirestore, query, where} from "firebase/firestore" 
 
-const ItemListContainer = () =>{
+
+export const ItemListContainer = () =>{
   const [items, setItems] = useState([])
-  const { categoria } = useParams()
-  
-  const traerItems = () => {
-  return new Promise((resolve)=>{
-  
-  setTimeout(()=>{
-         resolve(categoria ? lista.filter(obj => obj.category === categoria): lista )
-    }, 500)
-  })
-}
-  
+  const { category } = useParams();
+
+
+  const getItems = async() => {
+    const db = getFirestore();
+
+   let qy;
+    if (category == undefined){
+      qy = query(collection(db, 'items'));
+    }else{
+      qy = query(collection(db, 'items'), where('categoryId', '==', category));
+    }
+    
+         
+    await getDocs(qy).then((snapshot) => {
+      const dataItem = snapshot.docs.map((datos)=> {
+        return {...datos.data(), id: datos.id};
+
+      });
+      setItems(dataItem);
+    
+    });
+
+  };
    
+
+ useEffect(()=>{
+    getItems();
   
-  useEffect(()=>{
-    traerItems().then(res => {
-    setItems(res)
-    })
-  },[categoria])
+},[category])
   
-   
+  
   
   return(
-    <ItemList items={items}/>
-    )
+    <div class="listContainer">
+      <ItemList items={items} />
+
+    </div>
+
+    );
   
-   
-  }
+  };
   
-  export default ItemListContainer
+  export default ItemListContainer;
   
-   
-  
-   
