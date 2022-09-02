@@ -1,9 +1,8 @@
 import logo_chart from '../assets/images/chart_icon_6.jpg';
 import { useContext, useState, useEffect } from 'react';
 import { CartContext } from './cartContext';
-import { NavLink, Link, useNavigate} from 'react-router-dom'
-import Item from './Item';
- 
+import { useNavigate} from 'react-router-dom'
+
 let TotalItems = 0
 
 

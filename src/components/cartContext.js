@@ -7,7 +7,7 @@ export const CartContext = createContext()
 //let cantidadTotal =0
 const Provider = (props) => {
     const [cart, setCart] = useState([]);
-    const [totalfinal, setTotalFinal] = useState(0);
+     
 
     
     const isInCart = (id) =>{
@@ -38,7 +38,7 @@ const Provider = (props) => {
   const calcularTotalFinal = () => {
     let TotalFinal = cart.reduce((prevalue, nextvalue) => prevalue + (nextvalue['price'] * nextvalue['cantidad'] || 0), 0);
     return(TotalFinal);
-    setTotalFinal(TotalFinal);
+    
     
   }
 

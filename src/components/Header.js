@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../assets/images/satchmologo.jpg';
 import NavBar from './NavBar.js';
-import {Link, NavLink} from "react-router-dom"
+import {Link } from "react-router-dom"
 import CartWidget from './CartWidget';
 
 
