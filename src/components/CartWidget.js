@@ -15,11 +15,9 @@ function CartWidget() {
   const onAddTotal = () => {
     if (cart.length == 0){
       let TotalItems = 0;
-      console.log("Total Items",TotalItems );
       setTotalItems(TotalItems);
     }else{
       let TotalItems = cart.reduce((prevalue, nextvalue) => prevalue + (nextvalue['cantidad'] || 0), 0);
-      console.log("Total Items",TotalItems );
       setTotalItems(TotalItems);
     }
 
@@ -35,9 +33,9 @@ useEffect(() => {
 
   return (
     <>
-    <div class="divChart">
-        <img class="chart_image" src={logo_chart} alt="logo"/>
-        <div class="textChart"> {totalitems} </div>
+    <div className="divChart">
+        <img className="chart_image" src={logo_chart} alt="logo"/>
+        <div className="textChart"> {totalitems} </div>
        
     </div>
         

@@ -1,31 +1,30 @@
 import React, { useContext } from 'react';
 import ItemCount from './ItemCount';
-import { useState, useEffect } from "react";
-import {Link, NavLink, useNavigate} from "react-router-dom";
+import { useState } from "react";
+import {Link, useNavigate} from "react-router-dom";
 import { CartContext } from './cartContext';
-import CartWidget from './CartWidget';
+//import CartWidget from './CartWidget';
  
 
 const ItemDetail = ({item}) =>{
     const [cantidad, setCantidad] = useState(0);
     const { addToCart} = useContext(CartContext);
-    const navigate = useNavigate();
+    //const navigate = useNavigate();
     
     
     const onAdd = (cantidad) => {
         setCantidad(cantidad);
         addToCart(item, cantidad);
-        console.log("aca va", item);
-
+       
     };
  
     return (
     
-        <div class="containerDetail">
+        <div className="containerDetail">
                 <br></br>
-                <div class="cardDetail">
+                <div className="cardDetail">
                     <br></br>
-                    <img class="imgDetail" src={item.imgItem} alt={item.title}/>
+                    <img className="imgDetail" src={item.imgItem} alt={item.title}/>
                     <br></br>
                      <h4>{item.title}</h4>
                      <h5>{item.detail}</h5>

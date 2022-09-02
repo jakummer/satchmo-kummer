@@ -1,13 +1,10 @@
 import { createContext, useEffect } from "react";
 import { useState } from "react";
-import CartWidget from "./CartWidget";
+//import CartWidget from "./CartWidget";
 
-//1- crear contexto
 export const CartContext = createContext()
 
-//2- creamos nuestro componente como capa de abstracción y llamamos a los children
-// pantalla nuevamente los componentes
-let cantidadTotal =0
+//let cantidadTotal =0
 const Provider = (props) => {
     const [cart, setCart] = useState([]);
     const [totalfinal, setTotalFinal] = useState(0);
@@ -17,14 +14,7 @@ const Provider = (props) => {
         return cart.some(item => item.id === id)
     }
 
-    // const addQty = (id, cantidad) =>{
-    //     let indexItem = cart.findIndex(prod => prod.id === id);
-    //     let auxItems = [...cart];
-    //     let newcantidad = auxItems[indexItem].cantidad + cantidad;
-    //     auxItems[indexItem] = {...auxItems[indexItem], cantidad: newcantidad};
-    //     setCart(auxItems);
-    // }
-
+    
     useEffect(() => {
         console.log(cart);
     }, [cart]);

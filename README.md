@@ -1,3 +1,16 @@
+# Presentation
+Satchmo es una tienda e-commerce que ofrece productos musicales y de sonido en marcas de primera lìnea.
+La tienda permite realizar la compra de cualquiera de estos productos de manera simple, segura y ágil.
+En el primer acceso, el usuario podrá ver todos los artículos en su totalidad, pero tendrá la posibilidad de acceder a los productos también según su categoría (Instrumentos Musicales o Sonido)
+Cuando desee acceder al detalle del artículo lo hará a través del botón "ver detalle".
+En el detalle del artículo tiene la posibilidad de cargar al carrito el artículo con la correspondiente cantidad. Una vez cargado al carrito aparecerá un link para volver al home.
+En cuaquier momento se odrá acceder al carrito para ir confirmando la orden de compra, como así también poder dar de baja algunos de los artículos seleccionados.
+Una vez que se decida confirmar la compra, deberá cargar los datos e iniciar la orden de compra.
+Finalizado este proceso se recibirá confirmación y el carrito se vaciará.
+
+![Satchmo](http://g.recordit.co/GENSukx7RN.gif)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from "react";
 import ItemList from "./ItemList";
-import lista from "../mock/productsmock";
 import { useParams } from 'react-router-dom';
 import { collection, getDoc, getDocs, getFirestore, query, where} from "firebase/firestore" 
 
@@ -40,9 +39,8 @@ export const ItemListContainer = () =>{
 },[category])
   
   
-  
   return(
-    <div class="listContainer">
+    <div className="listContainer">
       <ItemList items={items} />
 
     </div>

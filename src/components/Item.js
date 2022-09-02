@@ -1,16 +1,16 @@
 import React from 'react';
 import {Link} from "react-router-dom"
-import ItemCount from './ItemCount';
+//import ItemCount from './ItemCount';
 
 const Item = ({item})=>{
     <br></br>
     return(
 
         
-             <div class="container">
+             <div className="container">
                  <br></br>
                 
-                <div class="card">
+                <div className="card">
                     <br></br>
                     <img src={item.imgItem} alt={item.title} />
                     <br></br>

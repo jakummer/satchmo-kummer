@@ -1,8 +1,8 @@
 
 import { useContext, useState, useEffect } from 'react';
 import { CartContext } from './cartContext';
-import { addDoc, collection, getFirestore, doc, updateDoc} from 'firebase/firestore';
-import { Link, NavLink } from "react-router-dom"
+import { addDoc, collection, getFirestore} from 'firebase/firestore';
+import { Link } from "react-router-dom"
 
 
 const CartContainer = () => {
@@ -68,9 +68,6 @@ const CartContainer = () => {
 
   }
 
- 
-
-
 
   return (
 
@@ -86,7 +83,6 @@ const CartContainer = () => {
              </tr>
          </table>
 
-        {/* <ul className="ulcart"> */}
           {cart?.map((item, index) => (
          <table >
             <tr>
@@ -100,7 +96,7 @@ const CartContainer = () => {
            
 
           ))}
-        {/* </ul> */}
+      
        </div>
       
       <div>
@@ -146,5 +142,4 @@ const CartContainer = () => {
 };
 
  
-
 export default CartContainer;
